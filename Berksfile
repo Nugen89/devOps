@@ -7,5 +7,9 @@ cookbook 'nginx'
 cookbook 'git'
 cookbook 'users'
 cookbook 'sudo'
+cookbook 'unicorn'
+cookbook 'postgresql'
+
 cookbook 'chef-solo-search', git: "https://github.com/edelight/chef-solo-search.git"
-cookbook 'setup_apt_packages', path: '/home/nugen/Rails_Apps/deployment/site-cookbooks/setup_apt_packages'
+
+cookbook 'nugen', path: '/home/nugen/Rails_Apps/deployment/site-cookbooks/nugen'

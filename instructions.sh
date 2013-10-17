@@ -78,3 +78,20 @@ vagrant ssh
 
 # … to destroy vm
 vagrant destroy
+
+
+
+
+# Check outputs
+vagrant ssh -c "getent passwd myface"
+
+vagrant ssh -c "sudo /sbin/service nginx status"
+
+grep ip: Vagrantfile
+
+
+
+apt-get --yes --force-yes install $something
+
+
+http://cbednarski.com/articles/installing-ruby/
