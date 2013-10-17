@@ -1,0 +1,14 @@
+{
+  "id": "wam",
+  // The following should be the result of openssl passwd -1 plainpasswd
+  // but that's md5 on a mac. Alternatively run mkpasswd -m sha-512 -S mySalt on a linux machine
+  "password": "$6$mySalt4324$QpF7qjQXWB0qQPeao5qpTVLNX36oTWQXupbl7zttzwVt/APTg6R0h/Wn6WEAjL42x6mIOz3v2QBhG//aGsWdX/",
+  "ssh_keys": [
+    // Copy paste from your ssh public key
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfDxvFvEiC3n/FZ/qX1tGAuFa9geQPkBDTk4+mqkUQun301sCVmCKlWDY4k/AgNQJYUk4Gr+ZSMNIH5InEL2ypuw9rS4WC7Wg2yVTklJW9F1hCYavrA6TgaRIprr55EfKHfRmmNuGsl+gKxYqiIZbIRwPy3tWz0CI/7LL/odoFR8KnxTUPwA/mddhXVmeipJIXBseVa9Dw3eNGE7EAZQrC3geAXsHxu1K8zJUbu5TTamgEDTS1d/JwuDqiRmSX/h1HeqPe92pSjKWg+r4CDA6BD9o5upUVZZaY9XzMVJ56k7W8E5ydtou3mS0cbvkLomcQrjEygglolIKzWBbqQt7X nguyen.david89@gmail.com"
+    ],
+  "groups": [ "sysadmin" ],
+  "uid": 2001,
+  "shell": "\/bin\/bash",
+  "comment": ""
+}
