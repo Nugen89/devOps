@@ -3,21 +3,27 @@ description "Base role applied to all nodes"
 
 run_list(
 	"recipe[apt]",
+	# "recipe[nugen::update_packages]",
 	"recipe[build-essential]",
-	# "recipe[rbenv]",
 	"recipe[sudo]",
 	"recipe[git]",
 	"recipe[chef-solo-search]",
 	# "recipe[users::sysadmins]",
-
 	"recipe[nginx]",
-	"recipe[postgresql]",
 
 	"recipe[nugen::setup_admin_users]",
 	"recipe[nugen::install_nodejs]",
 	"recipe[nugen::install_docsplit]",
-	"recipe[nugen::install_rbenv]"
+	"recipe[nugen::install_rbenv]",
+	"recipe[nugen::install_postgresql]"
+
 )
+
+# default_attributes(
+#   "build_essential" => {
+#     "compiletime" => true
+#   }
+# )
 
 # override_attributes(
 #   :apache2 => {
@@ -37,9 +43,6 @@ run_list(
   #     "prefix": "/opt/nginx"
   #   }
   # }
-
-
-
 
 
 

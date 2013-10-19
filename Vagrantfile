@@ -108,6 +108,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           :users => ["vagrant"],
           :passwordless => true
         }
+      },
+      :build_essential => {
+        :compiletime => true
+      },
+      :postgresql => {
+        :password => {
+          :postgres => "iamthebest"
+        }
       }
       # :nginx => {
       #   :default_site_enabled => false,
@@ -121,6 +129,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   end
+
+  # config.vm.provision :chef_solo do |chef|
+  #   # other stuff... like: chef.add_recipe "postgresql::server"
+  #   chef.json = {
+  #     "postgresql" => {
+  #       "password" => {
+  #         "postgres" => "iloverandompasswordsbutthiswilldo"
+  #       }
+  #     }
+  #   }
+  # end
+
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).

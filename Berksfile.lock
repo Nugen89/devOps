@@ -24,6 +24,9 @@
     "postgresql": {
       "locked_version": "3.1.0"
     },
+    "database": {
+      "locked_version": "1.5.2"
+    },
     "chef-solo-search": {
       "locked_version": "0.5.1",
       "git": "https://github.com/edelight/chef-solo-search.git",
@@ -57,6 +60,15 @@
       "locked_version": "1.1.4"
     },
     "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "mysql": {
+      "locked_version": "3.0.12"
+    },
+    "aws": {
+      "locked_version": "0.101.6"
+    },
+    "xfs": {
       "locked_version": "1.1.0"
     }
   }

@@ -8,19 +8,6 @@
 # end
 
 
-# 
-# echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-# echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-# git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-# source ~/.bash_profile
-# rbenv install 1.9.3-p0
-# rbenv rehash
-
-# git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-# echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-# echo 'eval "$(rbenv init -)"' >> ~/.zshrc
-
-
 # Ubuntu note: 
 # Use ~/.profile instead of ~/.bash_profile below. Also, we’ll need to install some dependencies first:
 
@@ -34,15 +21,10 @@ execute "Setup rbenv and ruby" do
 		echo 'eval "$(rbenv init -)"' >> ~/.profile
 		exec $SHELL -l
 		rbenv install 1.9.3-p392
+		rbenv global 1.9.3-p392 
 		rbenv rehash
   EOC
   action :run
 end
 
 
-execute "Install rails" do
-  command <<-EOC
-    gem install rails
-  EOC
-  action :run
-end

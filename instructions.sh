@@ -95,3 +95,7 @@ apt-get --yes --force-yes install $something
 
 
 http://cbednarski.com/articles/installing-ruby/
+
+http://docs.opscode.com/essentials_nodes_chef_run.html
+
+http://ariejan.net/2011/09/14/lighting-fast-zero-downtime-deployments-with-git-capistrano-nginx-and-unicorn/
