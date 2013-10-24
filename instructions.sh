@@ -20,6 +20,19 @@ vagrant plugin list
 
 rbenv rehash
 
+
+apt-get --yes --force-yes install $something
+
+
+POSTGRESQL commands
+\list # tables
+\dt # tables in current db
+\du # users
+
+Find path of install
+type git
+which git
+
 ---------------------------------------------------------------------------------
 
 vagrant init
@@ -81,7 +94,6 @@ vagrant destroy
 
 
 
-
 # Check outputs
 vagrant ssh -c "getent passwd myface"
 
@@ -91,9 +103,16 @@ grep ip: Vagrantfile
 
 
 
-apt-get --yes --force-yes install $something
+
+cap deploy:setup
+cap deploy:cold
+
+gem install bundler
+gem install capistrano
+gem install capistrano-bundler
 
 
+--------------------------------------------------------------------------------------
 http://cbednarski.com/articles/installing-ruby/
 
 http://docs.opscode.com/essentials_nodes_chef_run.html

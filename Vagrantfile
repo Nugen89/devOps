@@ -32,7 +32,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
-  # config.ssh.forward_agent = true
+  # config.ssh.private_key_path = "~/.ssh/id_rsa"
+  config.ssh.forward_agent = true
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -127,19 +128,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # }
     }
 
-
   end
-
-  # config.vm.provision :chef_solo do |chef|
-  #   # other stuff... like: chef.add_recipe "postgresql::server"
-  #   chef.json = {
-  #     "postgresql" => {
-  #       "password" => {
-  #         "postgres" => "iloverandompasswordsbutthiswilldo"
-  #       }
-  #     }
-  #   }
-  # end
 
 
   # Enable provisioning with chef server, specifying the chef server URL,

@@ -1,13 +1,3 @@
-# execute "update and upgrade packages" do
-#   command "apt-get -y update"
-#   action :run
-# end
-
-# template '/etc/apt/sources.list.d/my_apt_sources.list' do
-#   notifies :run, 'execute[apt-get update]', :immediately
-# end
-
-
 # node.set['postgresql']['version']             = "9.2"
 # node.set['postgresql']['enable_pgdg_apt']     = true
 # node.set['postgresql']['password']            = { :postgres => "iamthebest" }
@@ -31,14 +21,13 @@
 # set['postgresql']['contrib']['packages'] = ["postgresql-contrib-9.2"]
 
 
-
 include_recipe "postgresql::apt_pgdg_postgresql"
 include_recipe "postgresql::server"
 include_recipe "postgresql::ruby"
-# include_recipe "postgresql"
 
 include_recipe "database"
-include_recipe "database::postgresql" # https://github.com/opscode-cookbooks/database
+include_recipe "database::postgresql" 
+# https://github.com/opscode-cookbooks/database
 
 
 postgresql_connection_info = {
@@ -46,11 +35,6 @@ postgresql_connection_info = {
   :port     => node['postgresql']['config']['port'],
   :username => 'postgres',
   :password => node['postgresql']['password']['postgres']
-  # template 'DEFAULT'
-  # encoding 'DEFAULT'
-  # tablespace 'DEFAULT'
-  # connection_limit '-1'
-  # owner 'postgres'
 }
 
 postgresql_database 'teach_db_dev' do
@@ -99,21 +83,5 @@ end
 #     :username  => 'postgres',
 #     :password  => node['postgresql']['password']['postgres']
 #   )
-#   action :create
-# end
-
-# # create a postgresql database with additional parameters
-# postgresql_database 'mr_softie' do
-#   connection(
-#     :host     => '127.0.0.1',
-#     :port     => 5432,
-#     :username => 'postgres',
-#     :password => node['postgresql']['password']['postgres']
-#   )
-#   template 'DEFAULT'
-#   encoding 'DEFAULT'
-#   tablespace 'DEFAULT'
-#   connection_limit '-1'
-#   owner 'postgres'
 #   action :create
 # end

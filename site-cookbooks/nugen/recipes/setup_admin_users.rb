@@ -13,19 +13,17 @@
 #   action :create
 # end
 
+group "sysadmin"
 
+user node[:nugen][:user] do
+  group node[:nugen][:group]
+  system true
+  shell "/bin/bash"
+end
 
-# group "admin"
-
-# user node[:nugen][:user] do
-#   group node[:nugen][:group]
-#   system true
-#   shell "/bin/bash"
-# end
-
-# user "deployer" do
-#   group node[:nugen][:group]
-#   system true
-#   shell "/bin/bash"
-# end
+user "deployer" do
+  group node[:nugen][:group]
+  system true
+  shell "/bin/bash"
+end
 

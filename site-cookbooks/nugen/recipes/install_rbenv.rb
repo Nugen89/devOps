@@ -7,7 +7,6 @@
 #   ruby_version "1.9.3-p194"
 # end
 
-
 # Ubuntu note: 
 # Use ~/.profile instead of ~/.bash_profile below. Also, we’ll need to install some dependencies first:
 

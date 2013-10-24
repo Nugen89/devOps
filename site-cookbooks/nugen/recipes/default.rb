@@ -1,6 +1,5 @@
 include_recipe "nugen::setup_admin_users"
 include_recipe "nugen::update_packages"
-# include_recipe "nugen::ensure_ruby_setup"
 # include_recipe "nugen::install_irb"
 # include_recipe "nugen::copy_dotfiles"
 # include_recipe "nugen::set_timezone"

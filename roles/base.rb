@@ -12,11 +12,10 @@ run_list(
 	"recipe[nginx]",
 
 	"recipe[nugen::setup_admin_users]",
-	"recipe[nugen::install_nodejs]",
-	"recipe[nugen::install_docsplit]",
 	"recipe[nugen::install_rbenv]",
+	"recipe[nugen::install_nodejs]",
+	# "recipe[nugen::install_docsplit]",
 	"recipe[nugen::install_postgresql]"
-
 )
 
 # default_attributes(
@@ -33,20 +32,6 @@ run_list(
 #     :worker_threads => "100"
 #   }
 # )
-
-
-  # "nginx": {
-  #   "default_site_enabled": false,
-  #   "workers": 4,
-  #   "init_style": "init",
-  #   "source": {
-  #     "prefix": "/opt/nginx"
-  #   }
-  # }
-
-
-
-
 
 
 # env_run_lists "name" => ["recipe[name]"], "environment_name" => ["recipe[name::attribute]"]
