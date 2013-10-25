@@ -82,6 +82,7 @@ mkpasswd -m sha-512 -S mySalt
 # … to start vm
 # … NOTE: will take a while to download the image the first time it is run
 vagrant up
+vagrant up --no-provision
 
 # … to re-provision
 vagrant provision
@@ -99,9 +100,9 @@ vagrant ssh -c "getent passwd myface"
 
 vagrant ssh -c "sudo /sbin/service nginx status"
 
+vagrant ssh-config > .ssh.config
+
 grep ip: Vagrantfile
-
-
 
 
 cap deploy:setup

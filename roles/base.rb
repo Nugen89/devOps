@@ -13,8 +13,9 @@ run_list(
 
 	"recipe[nugen::setup_admin_users]",
 	"recipe[nugen::install_rbenv]",
+	"recipe[nugen::install_rails]",
 	"recipe[nugen::install_nodejs]",
-	# "recipe[nugen::install_docsplit]",
+	"recipe[nugen::install_docsplit]",
 	"recipe[nugen::install_postgresql]"
 )
 
