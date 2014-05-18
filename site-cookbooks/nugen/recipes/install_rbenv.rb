@@ -51,13 +51,13 @@ execute "reload shell" do
   action :run
 end
 
-execute "install ruby 1.9.3-p392" do
-  command "rbenv install 1.9.3-p392"
+execute "install ruby 2.0.0-p353" do
+  command "rbenv install 2.0.0-p353"
   action :run
 end
 
-execute "set global ruby 1.9.3-p392" do
-  command "rbenv global 1.9.3-p392"
+execute "set global ruby 2.0.0-p353" do
+  command "rbenv global 2.0.0-p353"
   action :run
 end
 
